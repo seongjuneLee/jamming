@@ -1,7 +1,6 @@
 import Expo
 import React
 import ReactAppDependencyProvider
-import Daily
 
 @UIApplicationMain
 public class AppDelegate: ExpoAppDelegate {
@@ -21,9 +20,6 @@ public class AppDelegate: ExpoAppDelegate {
     reactNativeDelegate = delegate
     reactNativeFactory = factory
     bindReactNativeFactory(factory)
-
-    // Daily.co 모듈 등록
-    DailyCallManagerModule.register()
 
 #if os(iOS) || os(tvOS)
     window = UIWindow(frame: UIScreen.main.bounds)

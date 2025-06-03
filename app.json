@@ -1,39 +1,48 @@
 {
   "expo": {
-    "name": "BandPractice App",
-    "slug": "bandpractice-app",
+    "name": "BandPracticeApp",
+    "slug": "BandPracticeApp",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
-    "userInterfaceStyle": "automatic",
-    "newArchEnabled": true,
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/images/splash-icon.png",
+      "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "app.rork.bandpractice-app"
+      "bundleIdentifier": "com.bandpractice.app"
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "app.rork.bandpractice-app"
+      "package": "com.bandpractice.app"
     },
     "web": {
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/icon.png",
+      "bundler": "webpack",
+      "output": "static",
+      "build": {
+        "babel": {
+          "include": ["@expo/vector-icons", "react-native-web"]
+        }
+      }
     },
     "plugins": [
       [
         "expo-router",
         {
-          "origin": "https://rork.com/"
+          "origin": "http://localhost:19006"
         }
       ]
-    ]
+    ],
+    "scheme": "bandpractice"
   }
 }
